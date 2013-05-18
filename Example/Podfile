@@ -1,0 +1,3 @@
+xcodeproj 'Example'
+workspace '../SODAClient'
+inhibit_all_warnings!
