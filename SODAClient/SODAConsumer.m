@@ -58,25 +58,25 @@
                 @"percent" : ^(id value) {
                     return [[[NSNumberFormatter alloc] init] numberFromString:value];
                 },
-                @"datetimewtimezone" : ^(id value) {
+                @"date" : ^(id value) {
                     return [NSDate dateWithTimeIntervalSince1970:[value doubleValue]];
                 },
-                @"plaintext" : ^(id value) {
+                @"text" : ^(id value) {
                     return [value description];
                 },
                 @"number" : ^(id value) {
                     return [[[NSNumberFormatter alloc] init] numberFromString:value];
                 },
-                @"linkeddataset" : ^(id value) {
+                @"dataset_link" : ^(id value) {
                     return [[[NSNumberFormatter alloc] init] numberFromString:value];
                 },
-                @"formattedtext" : ^(id value) {
+                @"html" : ^(id value) {
                     return [value description];
                 },
                 @"money" : ^(id value) {
                     return [[[NSNumberFormatter alloc] init] numberFromString:value];
                 },
-                @"datetime" : ^(id value) {
+                @"calendar_date" : ^(id value) {
                     NSDateFormatter *dateReader = [[NSDateFormatter alloc] init];
                     [dateReader setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
                     return [dateReader dateFromString:[value description]];
@@ -93,7 +93,7 @@
                     location.needsRecoding = [value objectForKey:@"needs_recoding"] != nil ? [[value objectForKey:@"needs_recoding"] boolValue] : NO;
                     return location;
                 },
-                @"start" : ^(id value) {
+                @"stars" : ^(id value) {
                     return value;
                 },
                 @"photo" : ^(id value) {
@@ -107,14 +107,11 @@
                 @"document" : ^(id value) {
                     return  [SODADocument documentWithFileId:[value objectForKey:@"file_id"] fileName:[value objectForKey:@"filename"]];
                 },
-                @"multiplechoice" : ^(id value) {
+                @"drop_down_list" : ^(id value) {
                     return [value description];
                 },
                 @"flag" : ^(id value) {
                     return [value description];
-                },
-                @"checkbox" : ^(id value) {
-                    return value;
                 },
                 @"__defaultMapping__" : ^(id value) {
                     return value;
