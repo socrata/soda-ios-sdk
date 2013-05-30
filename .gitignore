@@ -16,3 +16,7 @@ profile
 DerivedData
 .idea/
 Tests/Pods
+
+Podfile.lock
+Pods
+atlassian-ide-plugin.xml

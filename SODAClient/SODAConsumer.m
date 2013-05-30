@@ -170,6 +170,7 @@
     SODAResponse *sodResponse = [[SODAResponse alloc] init];
     sodResponse.status = [NSNumber numberWithInteger:response.statusCode];
     sodResponse.json = JSON;
+    sodResponse.entity = JSON;
     sodResponse.headers = response.allHeaderFields;
     if (mapping != nil && [sodResponse.status isEqualToNumber:@200]) {
         id object = nil;
