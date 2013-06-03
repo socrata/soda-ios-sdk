@@ -24,7 +24,7 @@
     for (id order in self.expressions) {
         [builtOrders addObject:build(order)];
     }
-    return [builtOrders count] == 0 ? @"" : [NSString stringWithFormat:@"order %@", [builtOrders componentsJoinedByString:@", "]];
+    return [builtOrders count] == 0 ? @"" : [NSString stringWithFormat:@"order by %@", [builtOrders componentsJoinedByString:@", "]];
 }
 
 @end

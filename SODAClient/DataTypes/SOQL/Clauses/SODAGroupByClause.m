@@ -21,7 +21,7 @@
 - (NSString *)build {
     return (self.expressions == nil || [self.expressions count] == 0)
             ? @""
-            : [NSString stringWithFormat:@"group %@", [self.expressions componentsJoinedByString:@", "]];
+            : [NSString stringWithFormat:@"group by %@", [self.expressions componentsJoinedByString:@", "]];
 }
 
 @end
