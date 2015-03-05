@@ -4,8 +4,6 @@
 
 This is the iOS SDK for the Socrata Open Data API (SODA). Please refer to the developer site (http://dev.socrata.com/) for a deeper discussion of the underlying protocol.
 
-Currently this SDK only contains support for the Consumer aspects of the SODA API but may be extended later to include the publisher capabilities as well.
-
 ## Distribution
 
 You can add the SODA Client to your project as a CocoaPods dependency, static library or simply copying the client sources and adding the dependent frameworks.
